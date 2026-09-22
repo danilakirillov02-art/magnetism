@@ -775,26 +775,23 @@
       submittedAt: new Date().toISOString()
     };
 
+    // Запрос уходит в фоне — не ждём ответа, чтобы не тормозить редирект.
+    // Сигнал не отменяем: fetch долетит и запишется в таблицу, даже если
+    // человек уже ушёл дальше по кнопке.
     fetch(GAS_WEB_APP_URL, {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify(payload)
-    })
-      .then(function () {
-        document.getElementById('formState').style.display = 'none';
-        document.getElementById('successState').style.display = 'block';
-        setTimeout(function () {
-          window.location.href = SECRET_ROOM_URL;
-        }, 1400);
-      })
-      .catch(function (err) {
-        console.error('Ошибка отправки заявки:', err);
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Отправить заявку →';
-        errorText.textContent = 'Не получилось отправить заявку. Попробуй ещё раз или напиши нам в Telegram напрямую.';
-        errorText.style.display = 'block';
-      });
+    }).catch(function (err) {
+      console.error('Ошибка отправки заявки:', err);
+    });
+
+    document.getElementById('formState').style.display = 'none';
+    document.getElementById('successState').style.display = 'block';
+    setTimeout(function () {
+      window.location.href = SECRET_ROOM_URL;
+    }, 2000);
   }
 
   function scrollCarousel(direction) {
