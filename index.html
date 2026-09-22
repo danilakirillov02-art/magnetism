@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Женский Магнетизм — Игра с Кристиной Юдинцевой</title>
+<meta name="description" content="5 дней Игры «Женский Магнетизм» с Кристиной Юдинцевой: самоценность, деньги, проявленность.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brown-dark: #2a1d16;
+    --brown-card: #241812;
+    --bg: #16110d;
+    --tan: #d8a76b;
+    --tan-hover: #c8935a;
+    --tan-soft: rgba(216,167,107,0.14);
+    --cream: #fffdf9;
+    --text-muted: #cbb9a8;
+    --text-soft: #f2e9dd;
+    --border-light: #e7ddd0;
+    --border-dark: rgba(216,167,107,0.22);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: #fff;
+    line-height: 1.55;
+  }
+  .serif { font-family: "Playfair Display", Georgia, "Times New Roman", serif; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 56px 0; }
+  .card {
+    background: var(--brown-dark);
+    border-radius: 22px;
+    padding: 36px 32px;
+    border: 1px solid rgba(255,255,255,0.04);
+  }
+  @media (max-width: 560px) {
+    .card { padding: 26px 20px; border-radius: 18px; }
+    section { padding: 40px 0; }
+  }
+
+  h1, h2, h3 { margin: 0 0 16px; }
+  h2 { font-size: 30px; line-height: 1.2; font-weight: 700; }
+  h3 { font-size: 20px; font-weight: 700; }
+  @media (max-width: 560px) {
+    h2 { font-size: 25px; }
+  }
+  p { margin: 0 0 16px; }
+  .muted { color: var(--text-muted); }
+  .lead { font-size: 18px; color: var(--text-soft); }
+  .center { text-align: center; }
+
+  .kicker {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    color: var(--tan);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .hero-headline {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.12;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+  @media (max-width: 560px) {
+    .hero-headline { font-size: 30px; }
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--tan);
+    font-weight: 700;
+    margin-bottom: 14px;
+    padding: 5px 12px;
+    border: 1px solid var(--border-dark);
+    border-radius: 999px;
+    background: var(--tan-soft);
+  }
+
+  .hl {
+    color: var(--tan);
+    font-weight: 700;
+  }
+  .underline-hl {
+    background: linear-gradient(to top, rgba(216,167,107,0.35) 38%, transparent 38%);
+    padding: 0 2px;
+    font-weight: 700;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--tan);
+    color: #241608;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 26px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.15s ease, transform 0.1s ease;
+    font-family: inherit;
+  }
+  .btn:hover { background: var(--tan-hover); }
+  .btn:active { transform: scale(0.98); }
+  .btn-block { width: 100%; }
+  .btn-outline {
+    background: transparent;
+    border: 1px solid var(--tan);
+    color: var(--tan);
+  }
+  .btn-outline:hover { background: rgba(216,167,107,0.1); }
+
+  .divider { border: none; border-top: 1px solid rgba(255,255,255,0.12); margin: 28px 0; }
+  hr.section-rule { border: none; border-top: 1px solid rgba(255,255,255,0.08); margin: 0; }
+
+  /* ---------- Numbered pain cards ---------- */
+  .pain-grid { display: flex; flex-direction: column; gap: 12px; }
+  .pain-card {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: var(--brown-card);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 14px;
+    padding: 16px 18px;
+  }
+  .badge-num {
+    flex: 0 0 30px;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: var(--tan);
+    color: #241608;
+    font-weight: 800;
+    font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Playfair Display", Georgia, serif;
+  }
+  .pain-card p { margin: 0; color: var(--text-soft); font-size: 15.5px; }
+
+  /* ---------- "Not here" cards ---------- */
+  .no-grid { display: flex; flex-direction: column; gap: 12px; }
+  .no-card {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: var(--brown-card);
+    border-left: 3px solid #a0563d;
+    border-radius: 0 14px 14px 0;
+    padding: 16px 18px;
+  }
+  .no-icon { flex: 0 0 24px; color: #d98a6f; font-size: 18px; line-height: 1; }
+  .no-card b { display: block; color: #fff; margin-bottom: 4px; font-size: 16.5px; }
+  .no-card span { color: var(--text-muted); font-size: 15px; }
+
+  /* ---------- Feature rows (icon + text), reused for "внутри" + gifts ---------- */
+  .feature-row { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 16px; }
+  .feature-icon {
+    flex: 0 0 34px; width: 34px; height: 34px; border-radius: 50%;
+    background: var(--tan-soft); display: flex; align-items: center; justify-content: center; font-size: 16px;
+  }
+  .feature-row p { margin: 0; color: var(--text-soft); font-size: 15px; }
+  .feature-row p b { color: #fff; }
+
+  /* ---------- Program days ---------- */
+  .day-card {
+    background: var(--brown-card);
+    border: 1px solid var(--border-dark);
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+  }
+  .day-badge {
+    display: inline-block;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--tan);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .day-card h3 { margin: 0 0 8px; font-size: 19px; }
+  .day-card span { color: var(--text-muted); font-size: 15px; }
+  .module-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+  @media (max-width: 560px) { .module-grid { grid-template-columns: 1fr; } }
+  .module-card {
+    background: rgba(216,167,107,0.06);
+    border: 1px solid var(--border-dark);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .module-card b { display: block; color: var(--tan); font-size: 14.5px; margin-bottom: 4px; }
+  .module-card span { color: var(--text-muted); font-size: 14px; }
+
+  /* ---------- Checkmark list ---------- */
+  ul.check-list { list-style: none; padding: 0; margin: 0 0 16px; }
+  ul.check-list li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 12px;
+    color: var(--text-soft);
+  }
+  ul.check-list li::before {
+    content: "✓";
+    position: absolute; left: 0; top: 0;
+    color: var(--tan);
+    font-weight: 800;
+  }
+  ul.plain-list { list-style: none; padding-left: 0; margin: 0 0 16px; }
+  ul.plain-list li { padding-left: 22px; position: relative; margin-bottom: 10px; color: var(--text-soft); }
+  ul.plain-list li::before { content: "—"; position: absolute; left: 0; color: var(--tan); }
+
+  /* ---------- Pricing ---------- */
+  .tariff-card { text-align: center; border: 1px solid var(--border-dark); }
+  .price { font-family: "Playfair Display", Georgia, serif; font-size: 48px; font-weight: 800; color: var(--tan); margin: 12px 0 4px; }
+  .price-note { color: var(--text-muted); font-size: 14px; margin-bottom: 26px; }
+
+  /* ---------- Free-on-signup list ---------- */
+  .free-list { display: flex; flex-direction: column; gap: 14px; margin: 18px 0 6px; }
+  .free-item { display: flex; gap: 12px; align-items: flex-start; }
+  .free-icon {
+    flex: 0 0 28px; width: 28px; height: 28px; border-radius: 8px;
+    background: var(--tan); color: #241608; font-weight: 800; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .free-item b { color: #fff; }
+  .free-item span { color: var(--text-muted); font-size: 14.5px; display: block; }
+
+  /* ---------- Carousel ---------- */
+  .carousel-wrap { position: relative; }
+  .carousel {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 4px 4px 14px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--tan) transparent;
+  }
+  .carousel::-webkit-scrollbar { height: 6px; }
+  .carousel::-webkit-scrollbar-thumb { background: var(--tan); border-radius: 4px; }
+  .carousel img {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    max-height: 460px;
+    width: auto;
+    max-width: 82%;
+    border-radius: 14px;
+    border: 1px solid var(--border-dark);
+    display: block;
+  }
+  .carousel-arrow {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.55);
+    border: 1px solid var(--border-dark);
+    color: var(--tan);
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 5;
+  }
+  .carousel-arrow.left { left: -4px; }
+  .carousel-arrow.right { right: -4px; }
+  @media (max-width: 560px) {
+    .carousel-arrow { display: none; }
+    .carousel img { max-width: 90%; }
+  }
+
+  /* ---------- FAQ ---------- */
+  details {
+    background: var(--brown-card);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+  details summary {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    list-style: none;
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after {
+    content: "+";
+    float: right;
+    color: var(--tan);
+    font-size: 20px;
+  }
+  details[open] summary::after { content: "–"; }
+  details p { margin-top: 12px; color: var(--text-muted); font-size: 15px; }
+
+  /* ---------- Sticky header ---------- */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(22, 17, 13, 0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .topbar-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .topbar-title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .topbar .btn { padding: 10px 16px; font-size: 14px; }
+
+  footer { padding: 40px 0 60px; text-align: center; color: var(--text-muted); font-size: 13px; }
+  footer a { color: var(--tan); }
+
+  /* ---------- Modal ---------- */
+  .overlay {
+    position: fixed; inset: 0; background: rgba(15, 10, 6, 0.65);
+    display: none; align-items: center; justify-content: center; padding: 20px; z-index: 1000;
+  }
+  .overlay.open { display: flex; }
+  .modal {
+    background: var(--cream); color: #241a12; border-radius: 20px; max-width: 460px; width: 100%;
+    padding: 32px; max-height: 90vh; overflow-y: auto; position: relative;
+  }
+  .modal-close {
+    position: absolute; top: 16px; right: 16px; background: none; border: none;
+    font-size: 20px; cursor: pointer; color: #8a7a68;
+  }
+  .field { margin-bottom: 18px; }
+  .field label {
+    display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: #8a7a68; font-weight: 700; margin-bottom: 6px;
+  }
+  .field input[type="text"], .field input[type="tel"] {
+    width: 100%; padding: 12px 14px; border: 1px solid var(--border-light); border-radius: 10px;
+    font-size: 15px; background: #fff; font-family: inherit;
+  }
+  .field input:focus { outline: 2px solid var(--tan); outline-offset: 1px; }
+  .checkbox-row { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 14px; }
+  .checkbox-row input { margin-top: 3px; }
+  .checkbox-row label { font-size: 14px; line-height: 1.4; color: #3a2c1e; }
+  .checkbox-row .req { font-size: 11px; color: #a08a70; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-top: 2px; }
+  .modal .btn { width: 100%; margin-top: 6px; }
+  .modal .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+  .fine-print { font-size: 12px; color: #8a7a68; line-height: 1.5; margin-top: 18px; }
+  .fine-print a { color: #6b5847; }
+  .error-text { color: #b3432e; font-size: 13px; margin: -8px 0 14px; display: none; }
+  .success-state { text-align: center; padding: 12px 0 4px; }
+  .success-state h3 { margin: 0 0 10px; font-size: 20px; font-family: "Playfair Display", Georgia, serif; }
+  .success-state p { color: #5a4a38; margin: 0 0 22px; line-height: 1.5; }
+  .spinner {
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 3px solid rgba(36,26,18,0.15); border-top-color: #241a12;
+    margin: 0 auto 18px; animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-title">Женский Магнетизм</div>
+    <button class="btn" onclick="openModal()">Заявка на участие</button>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker serif">Женский Магнетизм</div>
+    <h1 class="hero-headline">Хватит ждать, когда тебе разрешат быть собой</h1>
+    <p class="lead">Прикоснись к Игре, в которой женщины за <span class="hl">5 дней</span> вспоминают, какими они рождены — <span class="underline-hl">притягивающими, лёгкими и желанными</span>.</p>
+    <p class="muted">Ты перестанешь быть удобной, гасить свой огонь ради чужого спокойствия и ждать, пока тебя заметят.</p>
+    <div class="cta-row" style="margin-top:28px;">
+      <button class="btn" onclick="openModal()">Заявка на участие</button>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- ================= ТЕБЕ СЮДА, ЕСЛИ ================= -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Узнай себя</div>
+    <h2 class="serif">Тебе сюда, если:</h2>
+    <div class="pain-grid">
+      <div class="pain-card"><div class="badge-num">1</div><p>Ты тянешь на себе дом, работу, иногда и детей, а внутри — вместо огня пустота и усталость</p></div>
+      <div class="pain-card"><div class="badge-num">2</div><p>Деньги приходят, но всё равно утекают, и ты не понимаешь почему</p></div>
+      <div class="pain-card"><div class="badge-num">3</div><p>Ты боишься проявиться, потому что в голове сидит «а что обо мне подумают»</p></div>
+      <div class="pain-card"><div class="badge-num">4</div><p>Мужчины рядом, но ты давно не помнишь, когда тебе дарили цветы просто так</p></div>
+      <div class="pain-card"><div class="badge-num">5</div><p>Ты стесняешься себя и прячешься даже от себя</p></div>
+      <div class="pain-card"><div class="badge-num">6</div><p>Знаешь, что достойна большего, но откладываешь это «на потом»</p></div>
+      <div class="pain-card"><div class="badge-num">7</div><p>Уже пробовала психологов и марафоны, но осознание так и не превратилось в результат</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- ================= ПОЗИЦИОНИРОВАНИЕ ================= -->
+<section>
+  <div class="wrap">
+    <p class="lead">«Женский Магнетизм» — это не тренинг и не марафон. Это Игра, за <span class="hl">5 дней</span> возвращающая тебе то состояние, в котором мужчины дарят цветы без повода, а деньги приходят «случайно».</p>
+    <p><b>Чтобы ты почувствовала эффект не через месяц, а уже завтра.</b><br><b>Чтобы это стало не разовой встряской, а привычным состоянием.</b></p>
+  </div>
+</section>
+
+<!-- ================= ПОЧЕМУ НЕ ПОМОГАЮТ МАРАФОНЫ ================= -->
+<section>
+  <div class="wrap">
+    <h2 class="serif">Почему не помогают обычные марафоны</h2>
+    <p class="muted">Ты можешь знать всё про самоценность и женственность — и всё равно оставаться в той же точке. Потому что тело и привычки меняются не от чтения, а от действия — особенно когда это действие выходит за рамки привычного.</p>
+    <p class="muted">Именно поэтому в Игре каждый день — конкретное задание, а не лекция. Ты делаешь — и только потом меняешься.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- ================= ЧЕГО ЗДЕСЬ НЕ БУДЕТ ================= -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Честно, без прикрас</div>
+    <h2 class="serif">Чего здесь не будет</h2>
+    <div class="no-grid">
+      <div class="no-card"><div class="no-icon">✕</div><div><b>Бесконечной теории про женственность вместо действий</b><span>За 5 дней ты либо начнёшь действовать, либо ничего не изменится.</span></div></div>
+      <div class="no-card"><div class="no-icon">✕</div><div><b>Советов «просто полюби себя»</b><span>Это обесценивание в красивой упаковке. Если бы это работало, ты бы уже давно себя любила.</span></div></div>
+      <div class="no-card"><div class="no-icon">✕</div><div><b>Заданий, которые заставляют стыдиться вместо того, чтобы раскрывать</b><span>Здесь нет маргинальных провокаций ради хайпа. Только то, что действительно двигает тебя вперёд, а не заставляет краснеть.</span></div></div>
+      <div class="no-card"><div class="no-icon">✕</div><div><b>Программы на 2 недели ради того же эффекта</b><span>Всё, что давала большая Игра за 14 дней, теперь умещается в 5.</span></div></div>
+      <div class="no-card"><div class="no-icon">✕</div><div><b>Тебя, сидящей в сторонке</b><span>Активность в чате и группе — часть игры: энергия работает, когда вы все в общем поле.</span></div></div>
+    </div>
+    <p class="muted" style="margin-top:20px;">И вот как мы это сделаем.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- ================= ЧТО ИЗМЕНИТСЯ ================= -->
+<section>
+  <div class="wrap">
+    <p class="lead">За <span class="hl">5 дней</span> ты забудешь, каково это — гасить себя, чтобы быть удобной.</p>
+    <p class="muted">И начнёшь превращаться в ту версию себя, которую замечают, которой восхищаются и с которой хотят быть рядом.</p>
+
+    <h2 class="serif" style="margin-top:32px;">Что изменится уже в первый день</h2>
+    <ul class="check-list">
+      <li>Перестанешь ждать разрешения быть яркой</li>
+      <li>Заметишь, что люди начинают реагировать на тебя иначе</li>
+      <li>Почувствуешь лёгкость вместо привычного контроля</li>
+      <li>Сделаешь то, на что раньше не решалась — и поймёшь, что ничего страшного не произошло</li>
+    </ul>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- ================= К ФИНАЛУ ИГРЫ ================= -->
+<section>
+  <div class="wrap">
+    <h2 class="serif">А к финалу игры</h2>
+    <p class="muted">Ты поймёшь, что могла позволить себе это уже давно. Увидишь первые «чудеса» — подарки, внимание, неожиданные деньги — такие, какие происходили с тысячами девушек в предыдущих потоках.</p>
+    <ul class="check-list">
+      <li>Увидишь, как меняется реакция мужчин и близких, когда ты перестаёшь гасить себя</li>
+      <li>Почувствуешь облегчение от внутреннего напряжения, которое носила годами</li>
+      <li>Поймёшь, готова ли идти дальше — во флагманскую программу с Кристиной, где работа идёт глубже и дольше</li>
+    </ul>
+    <p class="muted">Игра не обещает полного 180-градусного поворота жизни за 5 дней — она даёт честный ответ: твоё это или нет, и хочешь ли ты идти глубже с Кристиной.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- ================= КАК ПРОЙДЁТ ИГРА ================= -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Программа</div>
+    <h2 class="serif">Как пройдёт Игра</h2>
+
+    <div class="day-card">
+      <div class="day-badge">День 1</div>
+      <h3>Самоценность и уверенность в себе</h3>
+      <span>Работа с тенью — не подавлять её, а через неё выходить на другую ветку вероятности. Учишься видеть и вытаскивать уроки из того, что подкидывает мир, — и расти по уровням сознания вместо того, чтобы буксовать на одном месте.</span>
+    </div>
+    <div class="day-card">
+      <div class="day-badge">День 2</div>
+      <h3>Деньги и реализация</h3>
+      <span>Как включать нейропластичность мозга, чтобы деньги начали приходить не через «работать ещё больше», а через смену внутреннего состояния. В этот день — первый живой эфир с Кристиной, 2–3 часа вопросов, практик и живой энергии.</span>
+    </div>
+    <div class="day-card">
+      <div class="day-badge">Дни 3–5</div>
+      <h3>Модули Игры</h3>
+      <span>Второй живой эфир с Кристиной проходит в финале — ещё 2–3 часа, где она разбирает итоги. Плюс два секретных закрытых эфира — без анонса заранее, доступны всем участницам Игры.</span>
+      <div class="module-grid">
+        <div class="module-card"><b>Проявленность</b><span>Практические задания на нелогичное проявление: то, что выводит из зоны комфорта, заставляет взглянуть на мир по-новому и открывает доступ к возможностям, которые раньше не замечала.</span></div>
+        <div class="module-card"><b>Деньги</b><span>Углубляешь то, что запустила во второй день: разбираешь, где сама блокируешь поток, и закрепляешь новое состояние на практике, а не в теории.</span></div>
+        <div class="module-card"><b>Секс</b><span>Доступ к своей чувственности и телесной энергии, без стыда и без глянцевых лозунгов «просто раскрепостись».</span></div>
+        <div class="module-card"><b>Теневая сторона</b><span>Интеграция всего, что всплыло за Игру: то, что раньше пугало и мешало, становится ресурсом.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- ================= ВНУТРИ ТЕБЯ ЖДЁТ ================= -->
+<section>
+  <div class="wrap">
+    <h2 class="serif">Внутри тебя ждёт</h2>
+    <div class="feature-row"><div class="feature-icon">✦</div><p><b>Ежедневные задания от Кристины</b> — текст, голос и видео — занимают 10–20 минут в день.</p></div>
+    <div class="feature-row"><div class="feature-icon">✦</div><p><b>2 живых эфира с Кристиной по 2–3 часа</b> — вопросы, практики, живая энергия — то, за чем чаще всего и идут в Игру. Плюс 2 секретных закрытых эфира, о которых ты узнаешь уже внутри Игры.</p></div>
+    <div class="feature-row"><div class="feature-icon">✦</div><p><b>Общий чат Игры</b> — сотни женщин 24/7 делятся результатами — именно это создаёт то самое общее поле.</p></div>
+    <div class="feature-row"><div class="feature-icon">✦</div><p><b>Своя группа-поддержка</b> — 3–5 женщин рядом с тобой, которые проходят то же самое — можно не бояться выглядеть странно.</p></div>
+    <div class="feature-row"><div class="feature-icon">✦</div><p><b>Бонусы за активность</b> — PDF-гайды и дополнительные материалы за участие в чате.</p></div>
+    <div class="feature-row"><div class="feature-icon">✦</div><p><b>Сводка «чудес Игры»</b> — лучшие истории участниц публикуются каждый день — дополнительный импульс для всех остальных.</p></div>
+  </div>
+</section>
+
+<!-- ================= ТВОЙ ВХОД В ИГРУ ================= -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="card tariff-card">
+      <div class="eyebrow">Условия участия</div>
+      <h2 class="serif">Твой вход в Игру</h2>
+      <div class="price">4 990 ₽</div>
+      <div class="price-note">если ты входишь в Игру до 30 сентября</div>
+
+      <div style="text-align:left; margin-bottom:26px;">
+        <p><b>Что входит:</b></p>
+        <ul class="check-list">
+          <li>Задания каждого дня Игры и доступ к записям всех эфиров</li>
+          <li>2 живых эфира с Кристиной по 2–3 часа</li>
+          <li>2 секретных закрытых эфира — без анонса заранее</li>
+          <li>Общий чат Игры — сотни женщин в одном поле 24/7</li>
+          <li>Своя группа-поддержка (3–5 человек)</li>
+          <li>Бонусные PDF-гайды и аудио-практики</li>
+          <li>Место в ежедневной сводке «чудес Игры»</li>
+          <li>Приоритетное место на входе в флагманскую программу с Кристиной</li>
+        </ul>
+      </div>
+
+      <button class="btn btn-block" onclick="openModal()">Заявка на участие</button>
+      <p class="muted" style="margin-top:16px; font-size:13px;">После 30 сентября условия меняются. Дата старта фиксирована — чем дольше решаешь, тем меньше времени останется на подготовку.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ЗАЯВКА НА УЧАСТИЕ ================= -->
+<section id="zayavka">
+  <div class="wrap">
+    <div class="card">
+      <div class="eyebrow">Заявка на участие</div>
+      <h2 class="serif">Оставь контакты — я напишу тебе</h2>
+      <p class="muted">Сразу после заявки откроется чат в Telegram: расскажем, как устроена Игра и ответим на вопросы.</p>
+      <button class="btn" onclick="openModal()">Заявка на участие</button>
+
+      <hr class="divider">
+      <div class="eyebrow">Заявка ничего не стоит</div>
+      <p class="muted" style="margin-bottom: 4px;">Платить за саму заявку не нужно — сразу после неё ты получаешь:</p>
+      <div class="free-list">
+        <div class="free-item"><div class="free-icon">1</div><div><b>Закрытый канал «Тайная Комната»</b><span>Подкасты и материалы, которых нет в открытом доступе. Новое вы видите там первыми.</span></div></div>
+        <div class="free-item"><div class="free-icon">2</div><div><b>Самая выгодная цена</b><span>Она закрепляется за вами до 30 сентября.</span></div></div>
+        <div class="free-item"><div class="free-icon">3</div><div><b>Право сказать, что включить в программу</b><span>В канале спросим, чего вам не хватает, и соберём из ваших ответов часть программы.</span></div></div>
+        <div class="free-item"><div class="free-icon">4</div><div><b>Разговор с командой Крис</b><span>Расскажут, как устроена Игра, ответят на вопросы и помогут с оплатой.</span></div></div>
+      </div>
+
+      <hr class="divider">
+      <div class="eyebrow">После оплаты</div>
+      <div class="feature-row">
+        <div class="feature-icon">🎁</div>
+        <p><b>Денежная медитация</b> — авторская практика Кристины: после неё участницы часто пишут, что деньги словно «приходят сами».</p>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🎁</div>
+        <p><b>Гайд «Переписки и общение с мужчинами»</b> — если у тебя ступор в общении, забираешь и используешь сразу же.</p>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon">🎁</div>
+        <p><b>Секретные бонусы и подарки</b> — сюрприз, который раскрывается уже внутри Игры, отдельно от двух закрытых эфиров.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Я — КРИСТИНА ================= -->
+<section>
+  <div class="wrap">
+    <h2 class="serif">Я — Кристина Юдинцева</h2>
+    <ul class="plain-list">
+      <li>Автор Игры «Женский Магнетизм» — провожу её с 2021 года, через неё прошли сотни женщин</li>
+      <li>Провожу женские круги и авторские практики на темы денег и женской энергии</li>
+      <li>Живу так, как учу, и не боюсь показывать свою жизнь открыто — путешествия, откровенность, лёгкость во всём</li>
+    </ul>
+    <p class="muted">Я не учу женщин, как просить подарки. Я помогаю вернуть себе то состояние, из-за которого подарки, внимание и деньги приходят сами.</p>
+    <p class="muted">А самое главное — я никогда не рассказываю всё до конца — и в этой Игре ты наконец-то поймёшь, почему.</p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- ================= РЕЗУЛЬТАТЫ УЧАСТНИЦ ================= -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Не с наших слов</div>
+    <h2 class="serif">Результаты участниц</h2>
+    <p class="muted">Живые скрины из чатов и переписок — листай в любую сторону.</p>
+  </div>
+  <div class="carousel-wrap">
+    <button class="carousel-arrow left" onclick="scrollCarousel(-1)" aria-label="Назад">‹</button>
+    <div class="carousel" id="reviewCarousel">
+      <img src="images/review-1.jpg" alt="Отзыв участницы Игры" loading="lazy">
+      <img src="images/review-2.jpg" alt="Отзыв участницы Игры" loading="lazy">
+      <img src="images/review-3.jpg" alt="Отзыв участницы Игры" loading="lazy">
+      <img src="images/review-4.jpg" alt="Отзыв участницы Игры" loading="lazy">
+      <img src="images/review-5.jpg" alt="Отзыв участницы Игры" loading="lazy">
+      <img src="images/review-6.jpg" alt="Отзыв участницы Игры" loading="lazy">
+      <img src="images/review-7.jpg" alt="Отзыв участницы Игры" loading="lazy">
+    </div>
+    <button class="carousel-arrow right" onclick="scrollCarousel(1)" aria-label="Вперёд">›</button>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<!-- ================= FAQ ================= -->
+<section>
+  <div class="wrap">
+    <h2 class="serif">Ответы на вопросы</h2>
+
+    <details>
+      <summary>Мне будет стыдно за задания?</summary>
+      <p>В Игре нет заданий на унижение, шок-контент или то, что заставляет краснеть перед незнакомыми людьми. Все задания — про твоё внутреннее состояние: как ты говоришь, как реагируешь, как позволяешь себе быть заметной. Дискомфорт может быть — от новизны, не от стыда.</p>
+    </details>
+    <details>
+      <summary>А если я не самая активная и общительная?</summary>
+      <p>Игра работает и в темпе «наблюдаю и делаю по чуть-чуть». Тебе не нужно быть звездой чата, чтобы получить результат — результат приходит от выполнения заданий, а не от количества сообщений.</p>
+    </details>
+    <details>
+      <summary>У меня сейчас нет партнёра — мне подойдёт?</summary>
+      <p>Да. Игра не про «как удержать мужчину», а про то, как ты сама себя ощущаешь и подаёшь — это работает и в отношениях, и вне их: с коллегами, друзьями, незнакомыми людьми, в целом с миром.</p>
+    </details>
+    <details>
+      <summary>Сколько времени займёт в день?</summary>
+      <p>Базово — 15–30 минут на задание. Часть заданий встраивается прямо в обычный день: доехать до работы, зайти в магазин, написать сообщение — просто делаешь это иначе.</p>
+    </details>
+    <details>
+      <summary>А если не сработает?</summary>
+      <p>Эффект накопительный: то, что ты почувствуешь уже в первые дни, — это только начало. Даже если не случится мгновенных «чудес», ты выйдешь с ощутимым сдвигом в том, как ты себя ощущаешь, — а дальше это можно углублять в основной программе.</p>
+    </details>
+    <details>
+      <summary>Когда стартуем и как получить доступ?</summary>
+      <p>После оплаты ты получаешь доступ к закрытому чату и всем материалам Игры — целиком и сразу. Расписание эфиров и точная дата старта объявляются в чате за несколько дней до начала.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ================= ПОДДЕРЖКА ================= -->
+<section>
+  <div class="wrap">
+    <div class="card center">
+      <h2 class="serif">Остались вопросы?</h2>
+      <p class="muted">Если у тебя есть вопросы про Игру, оплату или тариф — напиши в мою службу поддержки, ответим быстро.</p>
+      <a class="btn btn-outline" href="https://t.me/KristiUdincevaHelp1" target="_blank" rel="noopener">Написать в поддержку</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © Кристина Юдинцева · «Женский Магнетизм» · <a href="https://t.me/KristiUdincevaHelp1" target="_blank" rel="noopener">Поддержка в Telegram</a>
+</footer>
+
+<!-- ================= ПОПАП С ФОРМОЙ ================= -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Закрыть">✕</button>
+
+    <div id="formState">
+      <div class="field">
+        <label for="f-name">Имя</label>
+        <input type="text" id="f-name" placeholder="Как к вам обращаться">
+      </div>
+      <div class="field">
+        <label for="f-phone">Номер телефона</label>
+        <input type="tel" id="f-phone" placeholder="+7 900 000-00-00">
+      </div>
+      <div class="field">
+        <label for="f-tg">Telegram для связи</label>
+        <input type="text" id="f-tg" placeholder="@username">
+      </div>
+
+      <div class="error-text" id="errorText">Заполни имя, телефон и Telegram, и подтверди согласие на обработку данных.</div>
+
+      <div class="checkbox-row">
+        <input type="checkbox" id="f-consent-data">
+        <label for="f-consent-data">
+          Я даю <a href="#" target="_blank">согласие</a> на обработку моих персональных данных и ознакомлен(а) с
+          <a href="#" target="_blank">Политикой обработки персональных данных</a>.
+          <span class="req">обязательно</span>
+        </label>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="f-consent-mailing">
+        <label for="f-consent-mailing">
+          Я хочу получать письма и сообщения о программах и эфирах. Отписаться можно в один клик.
+          <span class="req">по желанию</span>
+        </label>
+      </div>
+
+      <button class="btn" id="submitBtn" onclick="submitForm()">Отправить заявку →</button>
+
+      <div class="fine-print">
+        Нажимая кнопку, вы подтверждаете отмеченные согласия.<br><br>
+        <b>Пишем только с этого аккаунта:</b> <a href="https://t.me/KristiUdincevaHelp1" target="_blank">@KristiUdincevaHelp1</a><br><br>
+        Заявка ничего не списывает и ни к чему не обязывает — платить за неё не нужно.
+      </div>
+    </div>
+
+    <div id="successState" class="success-state" style="display:none;">
+      <div class="spinner"></div>
+      <h3>Заявка отправлена 🎉</h3>
+      <p>Переносим тебя в закрытый канал «Тайная Комната»…</p>
+      <a class="btn" style="text-decoration:none; display:flex; justify-content:center;" id="secretRoomLink" href="#" target="_blank" rel="noopener">Перейти сейчас →</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // URL твоего Google Apps Script Web App — данные из формы летят сюда.
+  const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycby5Ya7AJhh2vEv6HzwN5DiUngkMivEe5Ws92GsRc9mIyOog3S_ViOr7WMY0ZjqQPjon/exec";
+  const TARIFF_LABEL = "Женский Магнетизм · 4 990 ₽";
+  const SECRET_ROOM_URL = "https://t.me/+8OWz5B2mYbw3Mzk6";
+
+  document.getElementById('secretRoomLink').href = SECRET_ROOM_URL;
+
+  function openModal() {
+    document.getElementById('overlay').classList.add('open');
+    document.getElementById('formState').style.display = 'block';
+    document.getElementById('successState').style.display = 'none';
+    document.getElementById('errorText').style.display = 'none';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('overlay').addEventListener('click', function (e) {
+    if (e.target === this) closeModal();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  function submitForm() {
+    const name = document.getElementById('f-name').value.trim();
+    const phone = document.getElementById('f-phone').value.trim();
+    const telegram = document.getElementById('f-tg').value.trim();
+    const consentData = document.getElementById('f-consent-data').checked;
+    const consentMailing = document.getElementById('f-consent-mailing').checked;
+    const errorText = document.getElementById('errorText');
+
+    if (!name || !phone || !telegram || !consentData) {
+      errorText.style.display = 'block';
+      return;
+    }
+    errorText.style.display = 'none';
+
+    const submitBtn = document.getElementById('submitBtn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Отправляем…';
+
+    const payload = {
+      name: name,
+      phone: phone,
+      telegram: telegram,
+      tariff: TARIFF_LABEL,
+      consentData: consentData,
+      consentMailing: consentMailing,
+      source: window.location.href,
+      submittedAt: new Date().toISOString()
+    };
+
+    fetch(GAS_WEB_APP_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    })
+      .then(function () {
+        document.getElementById('formState').style.display = 'none';
+        document.getElementById('successState').style.display = 'block';
+        setTimeout(function () {
+          window.location.href = SECRET_ROOM_URL;
+        }, 1400);
+      })
+      .catch(function (err) {
+        console.error('Ошибка отправки заявки:', err);
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Отправить заявку →';
+        errorText.textContent = 'Не получилось отправить заявку. Попробуй ещё раз или напиши нам в Telegram напрямую.';
+        errorText.style.display = 'block';
+      });
+  }
+
+  function scrollCarousel(direction) {
+    const el = document.getElementById('reviewCarousel');
+    const amount = el.clientWidth * 0.82;
+    el.scrollBy({ left: direction * amount, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
